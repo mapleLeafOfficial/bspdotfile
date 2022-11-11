@@ -31,10 +31,9 @@ trap on_exit EXIT
 
 clone() {
 	echo "Cloning dots repo..."
-	git clone https://github.com/b4skyx/dotfiles /tmp/dots/
+	git clone https://github.com/mapleLeafOfficial/bspdotfile.git
 
-	echo "Cloning scripts repo..."
-	git clone https://github.com/b4skyx/unix-scripts /tmp/dots/scripts/
+	#echo "Cloning scripts repo..."
 }
 
 backup() {
