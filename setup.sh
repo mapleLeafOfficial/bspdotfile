@@ -1,4 +1,4 @@
 #!/bin/bash
 
 echo "== Dots Installer ==="
-cp .config ~/
+cp  -r .config ~/
