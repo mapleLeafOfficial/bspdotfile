@@ -7,14 +7,15 @@ super + Return
 	alacritty
 # program launcher
 super + d
-	rofi -show drun
+  rofi -modi drun,run -show drun -font "CodeNewRoman Nerd font Mono" -show-icons
+	#rofi -show drun
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
 Print
 	flameshot gui
 # lockscreen
-Pause
+super + l
 	betterlockscreen -l
 
 #
@@ -128,3 +129,19 @@ XF86AudioLowerVolume
 	amixer set Master 5%-
 XF86AudioMute
 	amixer set Master toggle
+# warpd hotkeys
+alt +super + x
+  exec warpd --hint
+alt + super + c
+  warpd --normal
+alt + super + g
+  warpd --gr
+# Increase brightness
+XF86MonBrightnessUp
+    light -A 10 # 这里的数字表示增加的亮度值，可以根据需要调整
+
+# Decrease brightness
+XF86MonBrightnessDown
+    light -U 10 # 这里的数字表示减少的亮度值，可以根据需要调整
+    #echo powersave | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
+    #echo powersave | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
